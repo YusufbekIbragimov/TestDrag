@@ -637,4 +637,22 @@
         app:layout_constraintLeft_toRightOf="@id/num_8"
         app:layout_constraintTop_toTopOf="@id/num_7" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        android:elevation="10dp"
+        app:lottie_rawRes="@raw/winner"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/error"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,10 +15,12 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.TestDrag"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <data android:name="android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
