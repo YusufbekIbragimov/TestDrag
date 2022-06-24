@@ -211,15 +211,15 @@ fun setData(
         act31.text = arr[21]
         act32.text = arr[23]
 
-        initView2(num1,binding,mainActivity)
-        initView2(num2,binding,mainActivity)
-        initView2(num3,binding,mainActivity)
-        initView2(num4,binding,mainActivity)
-        initView2(num5,binding,mainActivity)
-        initView2(num6,binding,mainActivity)
-        initView2(num7,binding,mainActivity)
-        initView2(num8,binding,mainActivity)
-        initView2(num9,binding,mainActivity)
+        initView2(num1,binding,mainActivity,arr)
+        initView2(num2,binding,mainActivity,arr)
+        initView2(num3,binding,mainActivity,arr)
+        initView2(num4,binding,mainActivity,arr)
+        initView2(num5,binding,mainActivity,arr)
+        initView2(num6,binding,mainActivity,arr)
+        initView2(num7,binding,mainActivity,arr)
+        initView2(num8,binding,mainActivity,arr)
+        initView2(num9,binding,mainActivity,arr)
 
         getNumbers(arr).forEachIndexed { index, s ->
             if (s != 0) {

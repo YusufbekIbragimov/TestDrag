@@ -370,7 +370,12 @@ fun initView01(
 }
 
 @SuppressLint("ClickableViewAccessibility")
-fun initView2(view: TextView?, binding: ActivityMainBinding,mainActivity: MainActivity) {
+fun initView2(
+    view: TextView?,
+    binding: ActivityMainBinding,
+    mainActivity: MainActivity,
+    arr: List<String>
+) {
 
     view?.setOnDragListener(object : View.OnDragListener {
         override fun onDrag(v: View, event: DragEvent): Boolean {
@@ -379,22 +384,75 @@ fun initView2(view: TextView?, binding: ActivityMainBinding,mainActivity: MainAc
                     return true
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
-                    if ((v as TextView).background == mainActivity.getResources().getDrawable( R.drawable.back_blue )) {
-                        v.setBackgroundResource(R.drawable.back_blue)
-                    } else {
-                        v.setBackgroundResource(R.drawable.back_gray)
-                    }
                     return true
                 }
                 DragEvent.ACTION_DRAG_LOCATION -> {
+
+                    binding.num1.setBackgroundResource(R.drawable.back_blue)
+                    binding.num2.setBackgroundResource(R.drawable.back_blue)
+                    binding.num3.setBackgroundResource(R.drawable.back_blue)
+                    binding.num4.setBackgroundResource(R.drawable.back_blue)
+                    binding.num5.setBackgroundResource(R.drawable.back_blue)
+                    binding.num6.setBackgroundResource(R.drawable.back_blue)
+                    binding.num7.setBackgroundResource(R.drawable.back_blue)
+                    binding.num8.setBackgroundResource(R.drawable.back_blue)
+                    binding.num9.setBackgroundResource(R.drawable.back_blue)
+                    v.setBackgroundResource(R.drawable.back_gray)
+
+                    getNumbers(arr).forEachIndexed { index, s ->
+                        if (s != 0) {
+                            when (s) {
+                                1 -> {
+                                    binding.num1.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                2 -> {
+                                    binding.num2.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                3 -> {
+                                    binding.num3.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                4 -> {
+                                    binding.num4.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                5 -> {
+                                    binding.num5.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                6 -> {
+                                    binding.num6.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                7 -> {
+                                    binding.num7.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                8 -> {
+                                    binding.num8.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                                9 -> {
+                                    binding.num9.setBackgroundResource(
+                                        R.drawable.back_gray
+                                    )
+                                }
+                            }
+                        }
+                    }
                     return true
                 }
                 DragEvent.ACTION_DRAG_EXITED -> {
-                    if ((v as TextView).background == mainActivity.getResources().getDrawable( R.drawable.back_blue )) {
-                        v.setBackgroundResource(R.drawable.back_blue)
-                    } else {
-                        v.setBackgroundResource(R.drawable.back_gray)
-                    }
                     return true
                 }
                 DragEvent.ACTION_DROP -> return false
